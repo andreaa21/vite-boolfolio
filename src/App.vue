@@ -32,9 +32,10 @@ export default {
 
 <template>
   <div class="container">
-    <div v-for="project in projects" :key="project.id">
-      <h2>{{ project.name }}</h2>
-      <p>{{ project.summary}}</p>
+    <div v-for="project in projects" :key="project.id" class="card-container">
+      <ProjectCard
+        :project = "project"
+      />
     </div>
   </div>
 </template>
@@ -42,5 +43,15 @@ export default {
 
 
 <style lang="scss">
+
 @use './style/general.scss';
+
+.container{
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid red;
+
+}
+
 </style>
