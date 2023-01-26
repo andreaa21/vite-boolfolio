@@ -32,12 +32,11 @@ export default {
 
 <template>
   <div class="container">
-    <div v-for="project in projects" :key="project.id" class="card-container">
       <ProjectCard
+        v-for="project in projects" :key="project.id"
         :project = "project"
       />
     </div>
-  </div>
 </template>
 
 
@@ -49,9 +48,9 @@ export default {
 .container{
   width: 80%;
   max-width: 1200px;
-  margin: 0 auto;
-  border: 2px solid red;
-
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 </style>

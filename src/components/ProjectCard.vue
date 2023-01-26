@@ -9,9 +9,24 @@ export default {
 
 <template>
     <div class="card">
-        <h5>{{ project.name }}</h5>
+        <h3>{{ project.name }}</h3>
+        <h5 class="client">{{ project.client_name }}</h5>
         <div class="card-text">
+            <div class="badges">
+
+                <span class="category">{{ project.category.name }}</span>
+
+                <div class="technologies">
+                <ul
+                v-for="item in project.technologies" :key="item.id"
+                > 
+                <li class="technology">{{ item.name}}</li>
+                </ul>
+                </div>
+                
+            </div>
             <p>{{ project.summary }}</p>
+
         </div>
     </div>
 </template>
@@ -19,10 +34,45 @@ export default {
 <style lang="scss" scoped>
     .card{
         padding: 1rem;
-        border: 1px solid black;
-        width: 200px;
+        border: 2px solid black;
+        border-radius: 20px;
+        width: 300px;
         height: 400px;
         overflow: hidden;
+        margin: 1rem;
+        h3{
+            text-transform: uppercase;
+        }
+        .client{
+            margin: 1rem 0;
+        }
+        .badges{
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            .technologies{
+                display: flex;
+            }
+            .category{
+            color: white;
+            background-color: rgb(66, 76, 110);
+            padding: .5rem;
+            border-radius: 10px;
+            }
+            ul{
+                list-style: none;
+                margin-top: 10px;
+                display: flex;
+                .technology{
+                    padding: .5rem;
+                    border-radius: 10px;
+                    color: white;
+                    background-color: rgb(66, 141, 91);
+                    font-size: .7rem;
+                    margin: 0 5px;
+                }
+            }
+        }
     }
 </style>
 
