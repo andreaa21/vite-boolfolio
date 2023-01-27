@@ -31,7 +31,10 @@ export default {
 </script>
 
 <template>
+      <h1>Elenco Progetti</h1>
   <div class="container">
+
+
       <ProjectCard
         v-for="project in projects" :key="project.id"
         :project = "project"
@@ -53,4 +56,10 @@ export default {
   flex-wrap: wrap;
 }
 
+body{
+  background-color: rgb(77, 104, 153);
+}
+h1{
+  color: white;
+}
 </style>

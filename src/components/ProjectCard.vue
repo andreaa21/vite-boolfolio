@@ -34,7 +34,8 @@ export default {
 <style lang="scss" scoped>
     .card{
         padding: 1rem;
-        border: 2px solid black;
+        background-color: rgb(209, 209, 209);
+        border: 2px solid rgb(0, 0, 0);
         border-radius: 20px;
         width: 300px;
         height: 400px;
@@ -55,7 +56,7 @@ export default {
             }
             .category{
             color: white;
-            background-color: rgb(66, 76, 110);
+            background-color: rgb(116, 128, 184);
             padding: .5rem;
             border-radius: 10px;
             }
